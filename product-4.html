@@ -79,18 +79,103 @@
     </div>
     <!-- section -->
     <section>
-    <div class="box clearfix">
-      <div class="box-left">
-        <div class="title">
-          <h3>项目介绍</h3>
+      <div class="box clearfix">
+        <div class="box-left">
+          <div class="title">
+            <h3>服务介绍</h3>
+          </div>      
+          
+            <div style="width:150px;overflow: hidden; margin: auto">
+            
+              <div id="title" style="height:30px; font-size: 20px; font-weight: bold;" onclick="onTileClick()">软件服务>></div>
+            
+              <div id="content" style="height:150px;transition: height 0.2s; ">
+                <li><a href="product-1.html">办公平台(OA)</a></li>
+                <li><a href="product-2.html">上网防护软件</a></li>
+                <li><a href="product-3.html">等保评测</a></li>
+                <li><a href="product-4.html">咨询服务</a></li>
+              </div>
+              
+            </div>
+            
+          <script type="text/javascript">
+            var content = document.getElementById("content");
+            function onTileClick() {content.style.height = content.offsetHeight===150?0+'px':150+'px';}
+          </script> 
+          
+          <div style="width:150px;overflow: hidden; margin: auto">
+            <br>
+            <div id="title1" style="height:30px; font-size: 20px; font-weight: bold;" onclick="onTileClick1()">智能安防>></div>
+          
+            <div id="content1" style="height:0px;transition: height 0.2s;">
+              <li><a href="product-5.html">产品介绍</a></li>
+              <li><a href="product-6.html">服务介绍</a></li>
+            </div>
+            
+          </div>
+  
+        <script type="text/javascript">
+          var content1 = document.getElementById("content1");
+          function onTileClick1() {content1.style.height = content1.offsetHeight===80?0+'px':80+'px';}
+        </script> 
+  
+        <div style="width:150px;overflow: hidden; margin: auto">
+          <br>
+          <div id="title2" style="height:30px; font-size: 20px; font-weight: bold;" onclick="onTileClick2()">综合布线>></div>
+        
+          <div id="content2" style="height:0px;transition: height 0.2s;">
+            <li><a href="product-7.html">产品介绍</a></li>
+            <li><a href="product-8.html">服务介绍</a></li>
+          </div>
+          
         </div>
-        <ul>  
-          <li><a href="product.html">办公平台(OA)</a></li>
-          <li><a href="product-2.html">上网防护软件</a></li>
-          <li><a href="product-3.html">等保评测</a></li>
-          <li><a href="product-4.html">咨询服务</a></li>
-        </ul>
+  
+      <script type="text/javascript">
+        var content2 = document.getElementById("content2");
+        function onTileClick2() {content2.style.height = content2.offsetHeight===80?0+'px':80+'px';}
+      </script> 
+  
+      <div style="width:150px;overflow: hidden; margin: auto">
+        <br>
+        <div id="title3" style="height:30px; font-size: 20px; font-weight: bold;" onclick="onTileClick3()">机房建设>></div>
+      
+        <div id="content3" style="height:0px;transition: height 0.2s;">
+          <li><a href="product-9.html">产品介绍</a></li>
+          <li><a href="product-10.html">服务介绍</a></li>
+        </div>
+        
       </div>
+  
+    <script type="text/javascript">
+      var content3 = document.getElementById("content3");
+      function onTileClick3() {content3.style.height = content3.offsetHeight===80?0+'px':80+'px';}
+    </script> 
+  
+    <div style="width:150px;overflow: hidden; margin: auto">
+      <br>
+      <div id="title4" style="height:30px; font-size: 20px; font-weight: bold;" onclick="onTileClick4()">智慧停车>></div>
+    
+      <div id="content4" style="height:0px;transition: height 0.2s;">
+        <li><a href="product-11.html">产品介绍</a></li>
+        <li><a href="product-12.html">服务介绍</a></li>
+      </div>
+      
+    </div>
+  
+  
+  <script type="text/javascript">
+    var content4 = document.getElementById("content4");
+    function onTileClick4() {content4.style.height = content4.offsetHeight===80?0+'px':80+'px';}
+  </script> 
+  
+  
+          <!-- <ul>
+            <li><a href="product.html">办公平台(OA)</a></li>
+            <li><a href="product-2.html">上网防护软件</a></li>
+            <li><a href="product-3.html">等保评测</a></li>
+            <li><a href="product-4.html">咨询服务</a></li>
+          </ul> -->
+        </div>
       <div class="box-right">
         <div class="box-right-top">
           <ul>
