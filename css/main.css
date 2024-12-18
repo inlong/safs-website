@@ -361,3 +361,29 @@ header .header-container .nav-box .nav-mobile-menu span{
     width: 100% !important;
   }
 }  
+/* .img-container {
+  text-align: center;
+  width: 10px;
+  border: rgb(48, 12, 230) solid 1px;
+  } */
+  
+.img-center {
+  margin: 0 auto;
+  display: block;
+  }
+
+  .img-container {
+    width: 850px;
+    height: 580px;
+    position: relative;
+    }
+    
+    .img-absolute {
+    width: 840px;
+    height: 570px;
+    position: absolute;
+    left: 0%;
+    top: 0%;
+    margin-left: 0px;
+    margin-top: 0px;
+    }
