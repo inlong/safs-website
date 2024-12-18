@@ -372,13 +372,13 @@ header .header-container .nav-box .nav-mobile-menu span{
   display: block;
   }
 
-  .img-container {
+.img-container {
     width: 850px;
     height: 580px;
     position: relative;
     }
     
-    .img-absolute {
+.img-absolute {
     width: 840px;
     height: 570px;
     position: absolute;
