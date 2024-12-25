@@ -61,21 +61,21 @@ body{
   font-size: 22px;
   color: #ffffff;
   letter-spacing: 2px;
-  padding-top: 100px;
-  padding-left: 200px;
+  padding-top: 6%;
+  padding-left: 13%;
 }
 .banner-t2 .t2 {
   font-size: 40px;
   color: #ffffff;
-  padding-bottom: 24px;
-  padding-left: 200px;
+  padding-bottom: 2%;
+  padding-left: 13%;
 }
 .banner-t2 .t3 {
   font-size: 12px;
   line-height: 18px;
   color: #b4b6bd;
   max-width: 450px;
-  padding-left: 200px;
+  padding-left: 13%;
 }
 
 .banner .banner-t3 {
@@ -91,21 +91,21 @@ body{
   font-size: 22px;
   color: #ffffff;
   letter-spacing: 2px;
-  padding-top: 100px;
-  padding-left: 200px;
+  padding-top: 6%;
+  padding-left: 13%;
 }
 .banner-t3 .t2 {
   font-size: 40px;
   color: #ffffff;
-  padding-bottom: 24px;
-  padding-left: 200px;
+  padding-bottom: 2%;
+  padding-left: 13%;
 }
 .banner-t3 .t3 {
   font-size: 12px;
   line-height: 18px;
   color: #b4b6bd;
   max-width: 450px;
-  padding-left: 200px;
+  padding-left: 13%;
 }
 
 /*feature特色内容模块样式*/
