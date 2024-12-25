@@ -18,6 +18,96 @@ body{
   margin: 0 auto;
 }
 
+.banner .banner-t1 {
+  position: relative;
+  background: url("../img/Shanghai.jpg") center center;
+  background-size: 100% 100%;
+  width: 100%;
+  margin: 0 auto;
+  height: 568px;
+}
+
+.banner-t1 .t1 {
+  font-size: 22px;
+  color: #ffffff;
+  letter-spacing: 2px;
+  padding-top: 100px;
+  padding-left: 200px;
+}
+.banner-t1 .t2 {
+  font-size: 40px;
+  color: #ffffff;
+  padding-bottom: 24px;
+  padding-left: 200px;
+}
+.banner-t1 .t3 {
+  font-size: 12px;
+  line-height: 18px;
+  color: #b4b6bd;
+  max-width: 450px;
+  padding-left: 200px;
+}
+
+.banner .banner-t2 {
+  position: relative;
+  background: url("../img/Newyork.jpg") center center;
+  background-size: 100% 100%;
+  width: 100%;
+  margin: 0 auto;
+  height: 568px;
+}
+
+.banner-t2 .t1 {
+  font-size: 22px;
+  color: #ffffff;
+  letter-spacing: 2px;
+  padding-top: 100px;
+  padding-left: 200px;
+}
+.banner-t2 .t2 {
+  font-size: 40px;
+  color: #ffffff;
+  padding-bottom: 24px;
+  padding-left: 200px;
+}
+.banner-t2 .t3 {
+  font-size: 12px;
+  line-height: 18px;
+  color: #b4b6bd;
+  max-width: 450px;
+  padding-left: 200px;
+}
+
+.banner .banner-t3 {
+  position: relative;
+  background: url("../img/Tokyo.jpg") center center;
+  background-size: 100% 100%;
+  width: 100%;
+  margin: 0 auto;
+  height: 568px;
+}
+
+.banner-t3 .t1 {
+  font-size: 22px;
+  color: #ffffff;
+  letter-spacing: 2px;
+  padding-top: 100px;
+  padding-left: 200px;
+}
+.banner-t3 .t2 {
+  font-size: 40px;
+  color: #ffffff;
+  padding-bottom: 24px;
+  padding-left: 200px;
+}
+.banner-t3 .t3 {
+  font-size: 12px;
+  line-height: 18px;
+  color: #b4b6bd;
+  max-width: 450px;
+  padding-left: 200px;
+}
+
 /*feature特色内容模块样式*/
 .feature{ 
   width: 1120px;
