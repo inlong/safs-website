@@ -248,7 +248,12 @@ section{
 .box-right .box-right-mid .box-contact{
 	display: inline-block;
 	float: left;
-	padding-right: 40px;
+	padding-right: 100px;
+}
+.box-right .box-right-mid .box-contact1{
+	display: inline-block;
+	float: left;
+	padding-right: 0px;
 }
 
 .box-right .box-right-mid .box-contact span{
@@ -256,6 +261,15 @@ section{
 	width: 160px;
 	height: 160px;
 	background-image: url("../img/weixin-safs.png");
+	background-repeat: no-repeat;
+	background-size: cover;
+	margin: 0 auto;
+}
+.box-right .box-right-mid .box-contact1 span{
+	display: block;
+	width: 160px;
+	height: 160px;
+	background-image: url("../img/qrcode.jpg");
 	background-repeat: no-repeat;
 	background-size: cover;
 	margin: 0 auto;
