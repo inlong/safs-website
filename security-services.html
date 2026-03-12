@@ -1,0 +1,611 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>等保测评与网络安全 - 誉隆科技</title>
+    <meta name="description" content="誉隆科技等保测评与网络安全服务,提供专业的等保测评、网络安全规划、渗透测试、漏洞扫描等服务,全方位保护企业信息安全">
+    <meta name="keywords" content="等保测评,网络安全,渗透测试,漏洞扫描,信息安全,誉隆科技">
+    <link rel="icon" href="https://www.yulongit.com/img/favicon.ico">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --primary-color: #2563eb;
+            --secondary-color: #1e40af;
+            --text-dark: #1e293b;
+            --text-light: #64748b;
+            --bg-light: #f8fafc;
+            --white: #ffffff;
+            --gradient-primary: linear-gradient(135deg, #2563eb 0%, #1e40af 100%);
+            --gradient-secondary: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+            --shadow-sm: 0 2px 4px rgba(0, 0, 0, 0.1);
+            --shadow-md: 0 4px 6px rgba(0, 0, 0, 0.1);
+            --shadow-lg: 0 10px 25px rgba(0, 0, 0, 0.15);
+            --transition: all 0.3s ease;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Microsoft YaHei', 'PingFang SC', sans-serif;
+            line-height: 1.8;
+            color: var(--text-dark);
+            background-color: var(--white);
+            overflow-x: hidden;
+        }
+
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 30px;
+        }
+
+        /* Header & Navigation */
+        header {
+            background: var(--white);
+            box-shadow: var(--shadow-sm);
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            transition: var(--transition);
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 0;
+        }
+
+        .logo {
+            font-size: 1.8em;
+            font-weight: 800;
+            color: var(--primary-color);
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .nav-menu {
+            display: flex;
+            gap: 35px;
+            list-style: none;
+        }
+
+        .nav-menu a {
+            text-decoration: none;
+            color: var(--text-dark);
+            font-weight: 500;
+            font-size: 1.05em;
+            position: relative;
+            transition: var(--transition);
+        }
+
+        .nav-menu a:hover {
+            color: var(--primary-color);
+        }
+
+        /* Hero Section */
+        .hero {
+            background: var(--gradient-primary);
+            color: var(--white);
+            padding: 180px 0 120px;
+            text-align: center;
+        }
+
+        .hero h1 {
+            font-size: 3.5em;
+            font-weight: 800;
+            margin-bottom: 25px;
+        }
+
+        .hero p {
+            font-size: 1.4em;
+            opacity: 0.95;
+            max-width: 800px;
+            margin: 0 auto 40px;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 15px 40px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1.1em;
+            transition: var(--transition);
+            cursor: pointer;
+            border: none;
+        }
+
+        .btn-primary {
+            background: var(--white);
+            color: var(--primary-color);
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 25px rgba(255, 255, 255, 0.3);
+        }
+
+        section {
+            padding: 100px 0;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+
+        .section-title h2 {
+            font-size: 2.8em;
+            color: var(--text-dark);
+            margin-bottom: 20px;
+        }
+
+        .section-title p {
+            color: var(--text-light);
+            font-size: 1.2em;
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        /* Services Grid */
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(380px, 1fr));
+            gap: 35px;
+        }
+
+        .service-card {
+            background: var(--white);
+            border-radius: 20px;
+            padding: 40px;
+            box-shadow: var(--shadow-md);
+            transition: var(--transition);
+            border: 1px solid #e5e7eb;
+        }
+
+        .service-card:hover {
+            transform: translateY(-10px);
+            box-shadow: var(--shadow-lg);
+        }
+
+        .service-icon {
+            font-size: 4em;
+            margin-bottom: 25px;
+        }
+
+        .service-card h3 {
+            font-size: 1.8em;
+            color: var(--text-dark);
+            margin-bottom: 15px;
+        }
+
+        .service-card p {
+            color: var(--text-light);
+            margin-bottom: 20px;
+            line-height: 1.7;
+        }
+
+        .service-card ul {
+            list-style: none;
+        }
+
+        .service-card ul li {
+            padding: 10px 0;
+            padding-left: 30px;
+            position: relative;
+            color: var(--text-dark);
+            font-size: 1.05em;
+        }
+
+        .service-card ul li::before {
+            content: '✓';
+            position: absolute;
+            left: 0;
+            color: var(--primary-color);
+            font-weight: bold;
+        }
+
+        /* Detail Sections */
+        .detail-section {
+            background: var(--bg-light);
+            border-radius: 20px;
+            padding: 60px;
+            margin-bottom: 60px;
+        }
+
+        .detail-section h2 {
+            font-size: 2.2em;
+            color: var(--text-dark);
+            margin-bottom: 25px;
+        }
+
+        .detail-section p {
+            color: var(--text-light);
+            margin-bottom: 20px;
+            line-height: 1.9;
+            font-size: 1.1em;
+        }
+
+        .detail-section ul {
+            list-style: none;
+            margin-top: 20px;
+        }
+
+        .detail-section ul li {
+            padding: 12px 0;
+            padding-left: 35px;
+            position: relative;
+            color: var(--text-dark);
+            font-size: 1.05em;
+        }
+
+        .detail-section ul li::before {
+            content: '▸';
+            position: absolute;
+            left: 10px;
+            color: var(--primary-color);
+            font-weight: bold;
+        }
+
+        /* Advantages Grid */
+        .advantages-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+
+        .advantage-item {
+            text-align: center;
+            padding: 45px 30px;
+            background: var(--white);
+            border-radius: 20px;
+            box-shadow: var(--shadow-md);
+            transition: var(--transition);
+        }
+
+        .advantage-item:hover {
+            transform: translateY(-8px);
+            box-shadow: var(--shadow-lg);
+        }
+
+        .advantage-icon {
+            font-size: 3.5em;
+            margin-bottom: 20px;
+        }
+
+        .advantage-item h3 {
+            font-size: 1.6em;
+            color: var(--text-dark);
+            margin-bottom: 12px;
+        }
+
+        .advantage-item p {
+            color: var(--text-light);
+            line-height: 1.7;
+        }
+
+        /* Footer */
+        footer {
+            background: var(--gradient-secondary);
+            color: var(--white);
+            padding: 80px 0 30px;
+        }
+
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 50px;
+            margin-bottom: 50px;
+        }
+
+        .footer-section h4 {
+            font-size: 1.4em;
+            margin-bottom: 25px;
+            font-weight: 700;
+        }
+
+        .footer-section ul {
+            list-style: none;
+        }
+
+        .footer-section ul li {
+            padding: 10px 0;
+        }
+
+        .footer-section ul li a {
+            color: rgba(255, 255, 255, 0.85);
+            text-decoration: none;
+            transition: var(--transition);
+            font-size: 1.05em;
+        }
+
+        .footer-section ul li a:hover {
+            color: var(--white);
+        }
+
+        .footer-bottom {
+            text-align: center;
+            padding-top: 30px;
+            border-top: 1px solid rgba(255, 255, 255, 0.2);
+            color: rgba(255, 255, 255, 0.7);
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .nav-menu {
+                display: none;
+            }
+
+            .hero h1 {
+                font-size: 2.2em;
+            }
+
+            .hero p {
+                font-size: 1.1em;
+            }
+
+            .services-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .detail-section {
+                padding: 35px;
+            }
+
+            .section-title h2 {
+                font-size: 2em;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <nav>
+                <a href="index.html" class="logo">🏢 誉隆科技</a>
+                <ul class="nav-menu">
+                    <li><a href="index.html">首页</a></li>
+                    <li><a href="index.html#about">关于我们</a></li>
+                    <li><a href="index.html#products">核心业务</a></li>
+                    <li><a href="index.html#oa-solution">OA解决方案</a></li>
+                    <li><a href="index.html#contact">联系我们</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <h1>等保测评与网络安全服务</h1>
+            <p>全方位的网络安全解决方案,保护企业数字资产安全,满足等保合规要求</p>
+            <a href="index.html" class="btn btn-primary">返回首页</a>
+        </div>
+    </section>
+
+    <!-- Core Services Section -->
+    <section>
+        <div class="container">
+            <div class="section-title">
+                <h2>核心服务</h2>
+                <p>专业的网络安全服务,助力企业构建安全可靠的信息化环境</p>
+            </div>
+
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-icon">🔐</div>
+                    <h3>等保测评服务</h3>
+                    <p>提供等保2.0一站式测评服务,帮助企业通过等保认证,满足法律法规要求</p>
+                    <ul>
+                        <li>等级保护定级备案</li>
+                        <li>差距分析与整改</li>
+                        <li>等保测评实施</li>
+                        <li>测评报告出具</li>
+                        <li>持续合规咨询</li>
+                    </ul>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-icon">🛡️</div>
+                    <h3>网络安全规划</h3>
+                    <p>量身定制的网络安全架构设计,建立多层次的安全防护体系</p>
+                    <ul>
+                        <li>安全架构设计</li>
+                        <li>网络边界防护</li>
+                        <li>访问控制策略</li>
+                        <li>安全区域划分</li>
+                        <li>应急响应方案</li>
+                    </ul>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-icon">🔍</div>
+                    <h3>渗透测试服务</h3>
+                    <p>模拟真实攻击场景,发现系统安全漏洞,提前防范安全风险</p>
+                    <ul>
+                        <li>应用层渗透测试</li>
+                        <li>网络层渗透测试</li>
+                        <li>社会工程学测试</li>
+                        <li>漏洞分析与报告</li>
+                        <li>修复建议与验证</li>
+                    </ul>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-icon">📊</div>
+                    <h3>漏洞扫描服务</h3>
+                    <p>全面的漏洞扫描评估,识别系统中潜在的安全隐患和弱点</p>
+                    <ul>
+                        <li>主机漏洞扫描</li>
+                        <li>Web应用扫描</li>
+                        <li>数据库安全扫描</li>
+                        <li>配置审计</li>
+                        <li>定期扫描服务</li>
+                    </ul>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-icon">🚨</div>
+                    <h3>安全监测与加固</h3>
+                    <p>7×24小时安全监控,实时发现和应对安全威胁,持续优化安全防护</p>
+                    <ul>
+                        <li>实时安全监控</li>
+                        <li>入侵检测与防御</li>
+                        <li>安全事件响应</li>
+                        <li>系统安全加固</li>
+                        <li>安全运维服务</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Detailed Information Section -->
+    <section style="background: var(--bg-light);">
+        <div class="container">
+            <div class="detail-section" style="background: var(--white);">
+                <h2>🔐 等保测评服务详解</h2>
+                <p>等保测评(等级保护测评)是依据国家网络安全等级保护制度,对信息系统安全保护能力进行评估的活动。誉隆科技拥有一支专业的等保测评团队,提供从定级备案到测评认证的全流程服务。</p>
+                
+                <p><strong>等保测评流程:</strong></p>
+                <ul>
+                    <li><strong>系统定级</strong>: 根据信息系统的重要性和业务影响,确定等级保护级别</li>
+                    <li><strong>专家评审</strong>: 组织专家对定级结果进行评审和确认</li>
+                    <li><strong>定级备案</strong>: 向公安机关网络安全保卫部门提交备案申请</li>
+                    <li><strong>差距分析</strong>: 对照等保标准要求,分析现有系统的差距</li>
+                    <li><strong>整改建设</strong>: 根据差距分析结果,进行安全建设和整改</li>
+                    <li><strong>等级测评</strong>: 第三方测评机构进行全面测评,出具测评报告</li>
+                    <li><strong>监督检查</strong>: 接受公安机关的监督检查和指导</li>
+                </ul>
+
+                <p><strong>等保测评主要内容:</strong></p>
+                <ul>
+                    <li>安全物理环境: 机房、网络设备、服务器等物理设施安全</li>
+                    <li>安全通信网络: 网络架构、通信传输、网络边界防护</li>
+                    <li>安全区域边界: 边界防护、访问控制、入侵防范、恶意代码防范</li>
+                    <li>安全计算环境: 身份鉴别、访问控制、安全审计、入侵防范</li>
+                    <li>安全管理中心: 系统管理、审计管理、集中管控</li>
+                    <li>安全管理制度: 安全管理制度、安全管理机构、人员安全管理</li>
+                    <li>安全管理人员: 人员录用、人员离岗、安全意识教育和培训</li>
+                    <li>安全建设管理: 工程实施、测试验收、系统交付、服务采购</li>
+                    <li>安全运维管理: 环境管理、资产管理、介质管理、设备维护</li>
+                </ul>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Advantages Section -->
+    <section>
+        <div class="container">
+            <div class="section-title">
+                <h2>核心优势</h2>
+                <p>选择誉隆科技,您将获得专业的安全保障</p>
+            </div>
+
+            <div class="advantages-grid">
+                <div class="advantage-item">
+                    <div class="advantage-icon">👨‍💼</div>
+                    <h3>专业团队</h3>
+                    <p>持证等保测评师、网络安全专家,经验丰富的技术团队</p>
+                </div>
+
+                <div class="advantage-item">
+                    <div class="advantage-icon">⚡</div>
+                    <h3>快速响应</h3>
+                    <p>7×24小时应急响应,快速处置安全事件,降低损失</p>
+                </div>
+
+                <div class="advantage-item">
+                    <div class="advantage-icon">🔒</div>
+                    <h3>安全可靠</h3>
+                    <p>符合国家标准的安全体系,严格的保密协议,数据安全保障</p>
+                </div>
+
+                <div class="advantage-item">
+                    <div class="advantage-icon">🎯</div>
+                    <h3>定制方案</h3>
+                    <p>根据企业实际情况,量身定制安全解决方案,精准匹配需求</p>
+                </div>
+
+                <div class="advantage-item">
+                    <div class="advantage-icon">📋</div>
+                    <h3>一站式服务</h3>
+                    <p>从咨询规划到实施运维,提供全生命周期安全服务</p>
+                </div>
+
+                <div class="advantage-item">
+                    <div class="advantage-icon">🔄</div>
+                    <h3>持续优化</h3>
+                    <p>定期安全评估,持续优化安全防护体系,适应新威胁</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>关于誉隆</h4>
+                    <ul>
+                        <li>公司简介</li>
+                        <li>发展历程</li>
+                        <li>企业文化</li>
+                        <li>荣誉资质</li>
+                    </ul>
+                </div>
+
+                <div class="footer-section">
+                    <h4>核心业务</h4>
+                    <ul>
+                        <li><a href="oa-platform.html">泛微OA协同办公</a></li>
+                        <li><a href="security-services.html">等保测评与网络安全</a></li>
+                        <li><a href="server-parking.html">机房建设与智慧停车</a></li>
+                        <li><a href="smart-security.html">智能安防系统</a></li>
+                        <li><a href="software-services.html">企业软件服务</a></li>
+                        <li><a href="data-bi.html">数据分析与BI</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-section">
+                    <h4>联系我们</h4>
+                    <ul>
+                        <li>📞 0755-12345678</li>
+                        <li>✉️ info@yulongit.com</li>
+                        <li>📍 深圳市南山区科技园</li>
+                    </ul>
+                </div>
+
+                <div class="footer-section">
+                    <h4>服务承诺</h4>
+                    <ul>
+                        <li>专业可靠</li>
+                        <li>快速响应</li>
+                        <li>持续创新</li>
+                        <li>客户至上</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>© 2024 誉隆科技 版权所有 | 企业数智化转型的可靠伙伴</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
