@@ -120,6 +120,7 @@ section{
 .box-left li a{
 	color: #fff;
 	text-decoration: none;
+	outline: none;
 }
 
 .box-right{
